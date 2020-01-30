@@ -1,15 +1,20 @@
 #include "Card.h"
-#include <iostream>
 #include <string>
 
-int main()
-{
-	printf("Hello World!");
-}
+Card();
 
 int Card::GetCardValue()
 {
-	return 0;
+	int value = 0;
+	if (isFaceUp)
+	{
+		value = cardFace;
+	}
+	if (value > 10)
+	{
+		value = 10;
+	}
+	return value;
 }
 
 std::string Card::GetCardFace()
