@@ -1,25 +1,28 @@
 #pragma once
-#include<string>
+
 class Card
 {
-	enum cardFace { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King };
-	enum cardSuit { Spades, Clubs, Diamonds, Hearts };
+	enum  _cardFace { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King }cFace;
+	enum  _cardSuit { Spades, Clubs, Diamonds, Hearts }cSuit;
 
-	bool isFaceUp;
+	bool _isFaceUp;
 public:
-	Card(cardFace, cardSuit)
+	Card(_cardFace publicCardFace, _cardSuit publicCardSuit, bool isFaceUp)
 	{
-		cardFace publicCardFace = Ace;
-		cardSuit publicCardSuit = Spades;
+		cFace = publicCardFace;
+		cSuit = publicCardSuit;
+		_isFaceUp = isFaceUp;
 	}
-			
-	int GetCardValue();
 
-	std::string GetCardFace();
+	int GetCardFace() { return cFace; }
 
-	std::string GetCardSuit();
+	int GetCardSuit() { return cSuit; }
+
+	int GetValue();
+
+	bool GetCardState() { return _isFaceUp; }
 
 	void Flip();
 
-	//friend ostream& operator << (ostream& os, const Card& card);
+	//friend ostream& operator<<(ostream& os, Card const& card);
 };
