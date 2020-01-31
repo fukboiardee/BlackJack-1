@@ -1,3 +1,2 @@
-﻿  Card.cpp
-C:\School\BlackJack\Card.cpp(4,6): error C2059: syntax error: ')'
-C:\School\BlackJack\Card.cpp(11,11): error C2275: 'Card::cardFace': illegal use of this type as an expression
+﻿  Deck.cpp
+  Blackjack.vcxproj -> E:\Practice\Blackjack\BlackJack\x64\Debug\Blackjack.exe

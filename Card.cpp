@@ -1,32 +1,23 @@
 #include "Card.h"
-#include <string>
 
-Card();
+void Card::Flip()
+{
+	_isFaceUp = !(_isFaceUp);
+}
 
-int Card::GetCardValue()
+int Card::GetValue()
 {
 	int value = 0;
-	if (isFaceUp)
+	if (_isFaceUp)
 	{
-		value = cardFace;
-	}
-	if (value > 10)
-	{
-		value = 10;
+		value = GetCardFace();
+		if (value > 10) value = 10;
 	}
 	return value;
 }
 
-std::string Card::GetCardFace()
+/*std::ostream& operator<<(ostream& os, const Card& card)
 {
-	return std::string();
+	os << card.publicCardFace <<
 }
-
-std::string Card::GetCardSuit()
-{
-	return std::string();
-}
-
-void Card::Flip()
-{
-}
+*/
