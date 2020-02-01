@@ -4,7 +4,7 @@
 class Hand
 {
 protected:
-	std::vector<Card> Cards;
+	std::vector<Card> playerHand;
 public:
 	Hand();
 
@@ -12,5 +12,5 @@ public:
 
 	bool Busted();
 
-	void AddCard(Card playerCard);
+	void AddCardToHand(Card playerCard);
 };

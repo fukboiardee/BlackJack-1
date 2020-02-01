@@ -4,20 +4,20 @@ Hand::Hand()
 {
 }
 
-void Hand::AddCard(Card playerCard)
+void Hand::AddCardToHand(Card playerCard)
 {
-	Cards.push_back(playerCard);
+	playerHand.push_back(playerCard);
 }
 
 int Hand::Total()
 {
 	int total = 0;
-	for (auto i = Cards.begin(); i <= Cards.end(); i++)
+	bool hasAce = false;
+	for (auto i = playerHand.begin(); i <= playerHand.end(); i++)
 	{
 		total += i->GetValue();
 	}
-	bool hasAce = false;
-	for (auto i = Cards.begin(); i <= Cards.end(); i++)
+	for (auto i = playerHand.begin(); i <= playerHand.end(); i++)
 		if (i->GetValue() == Card::Ace)
 		{
 			hasAce = true;

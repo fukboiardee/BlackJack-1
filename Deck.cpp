@@ -8,13 +8,18 @@ Deck::Deck()
 {
 }
 
+void Deck::AddCardToDeck(Card currentCard)
+{
+	DeckCards.push_back(currentCard);
+}
+
 void Deck::MakeDeck()
 {
 	for (int x = Card::Spades; x <= Card::Hearts; x++)
 	{
 		for (int y = Card::Ace; y <= Card::King; y++)
 		{
-			AddCard(Card(static_cast<Card::cardFace>(x), static_cast<Card::cardSuit>(y), false));
+			AddCardToDeck(Card(static_cast<Card::cardFace>(x), static_cast<Card::cardSuit>(y), false));
 		}
 	}
 }
@@ -22,5 +27,5 @@ void Deck::MakeDeck()
 void Deck::Shuffle()
 {
 	std::srand(unsigned(std::time(0)));
-	std::random_shuffle(Cards.begin(), Cards.end());
+	std::random_shuffle(playerHand.begin(), playerHand.end());
 }

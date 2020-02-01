@@ -1,2 +1,7 @@
-﻿  Deck.cpp
+﻿  Card.cpp
+  Deck.cpp
+  Hand.cpp
+  Main.cpp
+  Player.cpp
+  Generating Code...
   Blackjack.vcxproj -> E:\Practice\Blackjack\BlackJack\x64\Debug\Blackjack.exe
