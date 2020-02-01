@@ -2,12 +2,13 @@
 
 class Card
 {
-	enum  _cardFace { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King }cFace;
-	enum  _cardSuit { Spades, Clubs, Diamonds, Hearts }cSuit;
-
+protected:
 	bool _isFaceUp;
 public:
-	Card(_cardFace publicCardFace, _cardSuit publicCardSuit, bool isFaceUp)
+	enum cardFace { Ace = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King }cFace;
+	enum cardSuit { Spades, Clubs, Diamonds, Hearts }cSuit;
+
+	Card(cardFace publicCardFace, cardSuit publicCardSuit, bool isFaceUp)
 	{
 		cFace = publicCardFace;
 		cSuit = publicCardSuit;

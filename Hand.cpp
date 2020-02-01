@@ -2,7 +2,6 @@
 
 Hand::Hand()
 {
-	Cards.reserve(14);
 }
 
 void Hand::AddCard(Card playerCard)
@@ -12,11 +11,22 @@ void Hand::AddCard(Card playerCard)
 
 int Hand::Total()
 {
-	if (Cards.empty())
-	{
-		return 0;
-	}
 	int total = 0;
+	for (auto i = Cards.begin(); i <= Cards.end(); i++)
+	{
+		total += i->GetValue();
+	}
+	bool hasAce = false;
+	for (auto i = Cards.begin(); i <= Cards.end(); i++)
+		if (i->GetValue() == Card::Ace)
+		{
+			hasAce = true;
+		}
+	if (hasAce && total <= 11)
+	{
+		total += 10;
+	}
+	return total;
 }
 
 bool Hand::Busted()

@@ -2,7 +2,10 @@
 
 void Card::Flip()
 {
-	_isFaceUp = !(_isFaceUp);
+	if (!_isFaceUp)
+	{
+		_isFaceUp = true;
+	}
 }
 
 int Card::GetValue()
