@@ -1,5 +1,6 @@
 #include "Deck.h"
 #include "Hand.h"
+#include "Card.h"
 #include <ctime>
 #include <algorithm>
 
@@ -13,6 +14,7 @@ void Deck::MakeDeck()
 	{
 		for (int y = Card::Ace; y <= Card::King; y++)
 		{
+			AddCard(Card(static_cast<Card::cardFace>(x), static_cast<Card::cardSuit>(y), false));
 		}
 	}
 }
