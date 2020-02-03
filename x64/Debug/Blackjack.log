@@ -2,6 +2,8 @@
   Deck.cpp
   Hand.cpp
   Main.cpp
+E:\Practice\Blackjack\BlackJack\Main.cpp(37,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Player.cpp
   Generating Code...
+E:\Practice\Blackjack\BlackJack\Card.cpp(55): warning C4715: 'Card::PrintCardFace': not all control paths return a value
   Blackjack.vcxproj -> E:\Practice\Blackjack\BlackJack\x64\Debug\Blackjack.exe

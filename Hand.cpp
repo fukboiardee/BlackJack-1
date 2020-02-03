@@ -13,11 +13,11 @@ int Hand::Total()
 {
 	int total = 0;
 	bool hasAce = false;
-	for (auto i = playerHand.begin(); i <= playerHand.end(); i++)
+	for (auto i = playerHand.begin(); i != playerHand.end(); i++)
 	{
 		total += i->GetValue();
 	}
-	for (auto i = playerHand.begin(); i <= playerHand.end(); i++)
+	for (auto i = playerHand.begin(); i != playerHand.end(); i++)
 		if (i->GetValue() == Card::Ace)
 		{
 			hasAce = true;
@@ -27,9 +27,4 @@ int Hand::Total()
 		total += 10;
 	}
 	return total;
-}
-
-bool Hand::Busted()
-{
-	return false;
 }

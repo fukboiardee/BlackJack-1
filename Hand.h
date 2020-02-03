@@ -10,7 +10,5 @@ public:
 
 	int Total();
 
-	bool Busted();
-
 	void AddCardToHand(Card playerCard);
 };

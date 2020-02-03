@@ -19,7 +19,7 @@ void Deck::MakeDeck()
 	{
 		for (int y = Card::Ace; y <= Card::King; y++)
 		{
-			AddCardToDeck(Card(static_cast<Card::cardFace>(x), static_cast<Card::cardSuit>(y), false));
+			AddCardToDeck(Card(static_cast<Card::cardFace>(y), static_cast<Card::cardSuit>(x), false));
 		}
 	}
 }
@@ -27,5 +27,12 @@ void Deck::MakeDeck()
 void Deck::Shuffle()
 {
 	std::srand(unsigned(std::time(0)));
-	std::random_shuffle(playerHand.begin(), playerHand.end());
+	std::random_shuffle(DeckCards.begin(), DeckCards.end());
+}
+
+Card Deck::Deal()
+{
+	Card top = DeckCards.back();
+	DeckCards.pop_back();
+	return top;
 }

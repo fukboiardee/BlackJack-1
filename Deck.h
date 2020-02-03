@@ -10,4 +10,6 @@ public:
 	void AddCardToDeck(Card currentCard);
 
 	void Shuffle();
+
+	Card Deal();
 };
